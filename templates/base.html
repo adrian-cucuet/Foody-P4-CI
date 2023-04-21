@@ -11,7 +11,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -52,14 +52,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="#" class="nav-item nav-link">Home</a>
-                        <a href="#"
+                        <a href="{% url 'foody:home' %}" class="nav-item nav-link">Home</a>
+                        <a href="{% url 'foody:about' %}"
                             class="nav-item nav-link">About
                             Us</a>
                         <a href="{% url 'foody:meal_list' %}"
                             class="nav-item nav-link">Menu</a>
                     </div>
-                    <a href="#" class="btn btn-primary py-2 px-4">Reserve Table</a>
+                    <a href="{% url 'foody:reserve_table' %}" class="btn btn-primary py-2 px-4">Reserve Table</a>
                 </div>
             </nav>
         </div>
@@ -74,10 +74,9 @@
                 <div class="row g-5">
                     <div class="col">
                         <h4 class="ff-secondary text-h fw-normal mb-4">Foody</h4>
-                        <a class="btn btn-link" href="#">About Us</a>
+                        <a class="btn btn-link" href="{% url 'foody:about' %}">About Us</a>
                         <a class="btn btn-link" href="{% url 'foody:meal_list' %}">Our Menu</a>
-                        <a class="btn btn-link" href="#">Reservation</a>
-                        <a class="btn btn-link" href="#">Terms & Condition</a>
+                        <a class="btn btn-link" href="{% url 'foody:reserve_table' %}">Reservation</a>
                     </div>
                     <div class="col text-align-center">
                         <h1 class="text-h m-0"><i class="fa fa-hamburger me-3"></i>Foody</h1>

@@ -172,7 +172,7 @@ body {
         z-index: 999;
         background: transparent !important;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: var(--dark) !important;
@@ -192,13 +192,13 @@ body {
     animation: imgRotate 50s linear infinite;
 }
 
-@keyframes imgRotate { 
-    100% { 
-        transform: rotate(360deg); 
-    } 
+@keyframes imgRotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
 
@@ -409,8 +409,8 @@ body {
 }
 
 .social-icons {
-        display: flex !important;
-        justify-content: flex-end;
+    display: flex !important;
+    justify-content: flex-end;
 }
 
 .meal-detail-col {
@@ -432,4 +432,17 @@ body {
     font-size: 5rem;
     font-weight: 800;
     text-align: right;
+}
+
+@media (max-width: 991.98px) {
+
+    .times-text {
+        font-size: 5rem;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .times-text-secondary {
+        text-align: center;
+    }
 }

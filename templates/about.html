@@ -2,70 +2,18 @@
 
 {% block content %}
 
-<!-- HERO Start -->
-<div class="py-5 bg-dark hero-header mb-5">
-    <div class="container my-5 py-5">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6 text-center text-lg-start">
-                <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Food</h1>
-                <p class="text-white animated slideInLeft mb-4 pb-2">We pride ourself with the best food and drinks. Don't just believe us, come try our menu!</p>
-                <a href="{% url 'foody:reserve_table' %}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
-            </div>
-            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                <img class="img-fluid" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552765/hero_nbqjl7.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End HERO -->
-
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-utensils text-h mb-4"></i>
-                        <h5>Quality Cuisine</h5>
-                        <p>We work with premium suppliers to make sure we cook with the best products on the market.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-carrot text-h mb-4"></i>
-                        <h5>Fresh Food</h5>
-                        <p>Because our suppliers are hand picked, we can guarantee our products are always fresh.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-user-friends text-h mb-4"></i>
-                        <h5>Friendly Staff</h5>
-                        <p>We have the MOST amazing staff! They all have an extensive experience in hospitality.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-book text-h mb-4"></i>
-                        <h5>Easy Reservation</h5>
-                        <p>Reserving a table with us is as easy as completing a form on our reservation page.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Service End -->
-
-
 <!-- About Start -->
+<div class="py-5 bg-custom hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="{% url 'foody:home' %}">Home</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
+            </ol>
+        </nav>
+    </div>
+</div>
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
@@ -111,6 +59,7 @@
                         </div>
                     </div>
                 </div>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
             </div>
         </div>
     </div>
@@ -185,63 +134,5 @@
     </div>
 </div>
 <!-- Team End -->
-
-
-<!-- Testimonial Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="text-center">
-            <h5 class="section-title ff-secondary text-center text-h fw-normal">Testimonial</h5>
-            <h1 class="mb-5">Our Clients Say!!!</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel">
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>The food was amazing, the staff were so polite and helpful. The guests raved about the food & we couldn't have been any happier</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-1_abhyls.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Maria</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>The restaurant is always well kept and very clean. The staff is friendly and the bartender knows how to make drinks, good drinks.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-2_ygbbxl.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Alessio</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>Everything about this place is perfect. The food is great. The service is great. The drinks are great. The establishment is tidy and welcoming. </p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-3_ge7cdf.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Adrian</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>Fantastic prawns! Everything on the menu is very good. Terrific waitresses - very friendly and efficient. Our group has tried everything on the menu and we love this place!</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-4_f7eau4.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Michele</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
 
 {% endblock content %}

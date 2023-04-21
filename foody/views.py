@@ -33,6 +33,13 @@ def home(request):
 
     return render(request, 'home.html')
 
+# About Page
+
+
+def about(request):
+
+    return render(request, 'about.html')
+
 # Reservation Form
 
 
