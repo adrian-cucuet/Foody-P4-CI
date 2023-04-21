@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Meals, Category
+from .models import Meals, Category, Reservation
+from .forms import ReserveTableForm
 
 # Menu List
 
@@ -31,3 +32,19 @@ def meal_detail(request, slug):
 def home(request):
 
     return render(request, 'home.html')
+
+# Reservation Form
+
+
+def reserve_table(request):
+    reserve_form = ReserveTableForm()
+
+    if request.method == 'POST':
+        reserve_form = ReserveTableForm(request.POST)
+
+        if reserve_form.is_valid():
+            reserve_form.save()
+    
+    context = {'form': reserve_form}
+
+    return render(request, 'reservation.html', context)

@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from datetime import datetime
 
 # Meal List
 
@@ -49,3 +50,26 @@ def meal_detail(request, slug):
     context = {'meal_detail': meal_detail, }
 
     return render(request, 'detail.html', context)
+
+# Reservation Form
+
+
+class Reservation(models.Model):
+    people_choices = (
+        ('one', '1 Person'),
+        ('two', '2 People'),
+        ('three', '3 People'),
+        ('four', '4 People'),
+        ('five_plus', '5+ People'),
+    )
+
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone = models.CharField(max_length=12)
+    number_of_people = models.CharField(
+        max_length=10, choices=people_choices, default='one')
+    Date = models.DateField(default=datetime.today)
+    time = models.TimeField(default=datetime.now)
+
+    def __str__(self):
+        return self.name
