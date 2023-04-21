@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Meals, Category, Reservation
+from .models import Meals, Category, Reservation, AboutUs, TeamMembers
 from .forms import ReserveTableForm
 
 # Menu List
@@ -36,9 +36,16 @@ def home(request):
 # About Page
 
 
-def about(request):
+def about_us(request):
+    about = AboutUs.objects.last()
+    team = TeamMembers.objects.last()
 
-    return render(request, 'about.html')
+    context = {
+        'about': about,
+        'team': team,
+    }
+
+    return render(request, 'about.html', context)
 
 # Reservation Form
 

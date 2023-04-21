@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 from datetime import datetime
 
+
 # Meal List
 
 
@@ -28,6 +29,7 @@ class Meals(models.Model):
     def __str__(self):
         return self.name
 
+
 # Meal Category
 
 
@@ -41,6 +43,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 # Meal Detail
 
 
@@ -50,6 +53,7 @@ def meal_detail(request, slug):
     context = {'meal_detail': meal_detail, }
 
     return render(request, 'detail.html', context)
+
 
 # Reservation Form
 
@@ -70,6 +74,48 @@ class Reservation(models.Model):
         max_length=10, choices=people_choices, default='one')
     Date = models.DateField(default=datetime.today)
     time = models.TimeField(default=datetime.now)
+
+    def __str__(self):
+        return self.name
+
+
+# About Us
+
+
+class AboutUs(models.Model):
+    title = models.CharField(max_length=50)
+    section_title = models.CharField(max_length=30)
+    content = models.TextField()
+    number_a = models.IntegerField()
+    title_a_small = models.CharField(max_length=30)
+    title_a_big = models.CharField(max_length=30)
+    number_b = models.IntegerField()
+    title_b_small = models.CharField(max_length=30)
+    title_b_big = models.CharField(max_length=30)
+    image_left_up = models.ImageField(upload_to='img/aboutus/')
+    image_Left_down = models.ImageField(upload_to='img/aboutus/')
+    image_right_up = models.ImageField(upload_to='img/aboutus/')
+    image_right_down = models.ImageField(upload_to='img/aboutus/')
+
+    class Meta:
+        verbose_name = 'About Us'
+        verbose_name_plural = 'About Us'
+
+    def __str__(self):
+        return self.title
+
+
+class TeamMembers(models.Model):
+    name = models.CharField(max_length=50)
+    title = models.CharField(max_length=30)
+    image = models.ImageField(upload_to='img/team/')
+    facebook = models.TextField()
+    twitter = models.TextField()
+    instagram = models.TextField()
+
+    class Meta:
+        verbose_name = 'Team Members'
+        verbose_name_plural = 'Team Members'
 
     def __str__(self):
         return self.name
