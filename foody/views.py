@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Meals, Category, Reservation, AboutUs, TeamMembers
-from .models import ServiceCards, HeroContainer, Testimonials
+from .models import ServiceCards, HeroContainer, Testimonials, DiningTimes
 from .forms import ReserveTableForm
 
 # Menu List
@@ -63,6 +63,7 @@ def about_us(request):
 
 
 def reserve_table(request):
+    timings = DiningTimes.objects.last()
     reserve_form = ReserveTableForm()
 
     if request.method == 'POST':
@@ -71,6 +72,9 @@ def reserve_table(request):
         if reserve_form.is_valid():
             reserve_form.save()
 
-    context = {'form': reserve_form}
+    context = {
+        'form': reserve_form,
+        'timings': timings,
+        }
 
     return render(request, 'reservation.html', context)

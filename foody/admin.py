@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Meals, Category, Reservation, AboutUs, TeamMembers
-from .models import ServiceCards, HeroContainer, Testimonials
+from .models import ServiceCards, HeroContainer, Testimonials, DiningTimes
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -24,3 +24,4 @@ admin.site.register(TeamMembers)
 admin.site.register(ServiceCards, ServiceCardsAdmin)
 admin.site.register(HeroContainer, HeroContainerAdmin)
 admin.site.register(Testimonials)
+admin.site.register(DiningTimes)

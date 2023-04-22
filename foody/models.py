@@ -79,6 +79,25 @@ class Reservation(models.Model):
         return self.name
 
 
+# Dining Times
+
+
+class DiningTimes(models.Model):
+    name = models.CharField(max_length=30)
+    breakfast = models.TextField()
+    breakfast_weekend = models.TextField(null=True, blank=True)
+    lunch = models.TextField()
+    lunch_weekend = models.TextField(null=True, blank=True)
+    dinner = models.TextField()
+    dinner_weekend = models.TextField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Dining Times'
+        verbose_name_plural = 'Dining Times'
+
+    def __str__(self):
+        return self.name
+
 # About Us
 
 
