@@ -9,7 +9,8 @@
             <div class="col-lg-6 text-center text-lg-start">
                 <h1 class="display-3 text-white animated slideInLeft">{{hero.title|safe}}</h1>
                 <p class="text-white animated slideInLeft mb-4 pb-2">{{hero.content|safe}}</p>
-                <a href="{% url 'foody:reserve_table' %}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{hero.cta_text}}</a>
+                <a href="{% url 'foody:reserve_table' %}"
+                    class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{hero.cta_text}}</a>
             </div>
             <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                 <img class="img-fluid" src="{{hero.image.url}}" alt="">
@@ -35,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            
+
             {% endfor %}
 
         </div>
@@ -51,17 +52,20 @@
             <div class="col-lg-6">
                 <div class="row g-3">
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="{{about.image_left_up.url}}">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+                            src="{{about.image_left_up.url}}">
                     </div>
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="{{about.image_right_up.url}}"
-                            style="margin-top: 25%;">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s"
+                            src="{{about.image_right_up.url}}" style="margin-top: 25%;">
                     </div>
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="{{about.image_left_down.url}}">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"
+                            src="{{about.image_left_down.url}}">
                     </div>
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{{about.image_right_down.url}}">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
+                            src="{{about.image_right_down.url}}">
                     </div>
                 </div>
             </div>
@@ -72,7 +76,8 @@
                 <div class="row g-4 mb-4">
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">{{about.number_a}}</h1>
+                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">{{about.number_a}}
+                            </h1>
                             <div class="ps-4">
                                 <p class="mb-0">{{about.title_a_small}}</p>
                                 <h6 class="text-uppercase mb-0">{{about.title_a_big}}</h6>
@@ -81,7 +86,8 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">{{about.number_b}}</h1>
+                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">{{about.number_b}}
+                            </h1>
                             <div class="ps-4">
                                 <p class="mb-0">{{about.title_b_small}}</p>
                                 <h6 class="text-uppercase mb-0">{{about.title_b_big}}</h6>
@@ -104,7 +110,7 @@
         </div>
         <div class="owl-carousel testimonial-carousel">
 
-        {% for testimonial in testimonials %}
+            {% for testimonial in testimonials %}
 
             <div class="testimonial-item bg-transparent border rounded p-4">
                 <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
@@ -118,11 +124,11 @@
                 </div>
             </div>
 
-        {% endfor %}
+            {% endfor %}
 
         </div>
-        </div>
     </div>
+</div>
 </div>
 <!-- Testimonial End -->
 

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Meals, Category, Reservation, AboutUs, TeamMembers
 from .models import ServiceCards, HeroContainer, Testimonials, DiningTimes
 from .forms import ReserveTableForm
+from django.contrib import messages
 
 # Menu List
 
@@ -71,10 +72,11 @@ def reserve_table(request):
 
         if reserve_form.is_valid():
             reserve_form.save()
+            messages.success(request, "We will contact you for confirmation!")
 
     context = {
         'form': reserve_form,
         'timings': timings,
-        }
+    }
 
     return render(request, 'reservation.html', context)

@@ -16,6 +16,13 @@
     </div>
 </div>
 <br>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 <!-- Times Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -42,13 +49,15 @@
         </div>
     </div>
 </div>
-
 <!-- Times End -->
+
 <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
     <div class="row g-0">
         <div class="col-md-6">
             <div class="img-reservation">
-                <span><p class="text-reservation"></p></span>
+                <span>
+                    <p class="text-reservation"></p>
+                </span>
             </div>
         </div>
         <div class="col-md-6 bg-custom d-flex align-items-center">

@@ -48,22 +48,22 @@
 
                         {% for meal in meal_list %}
 
-                            {% if meal.category == category %}
-                        
-                            <div>
-                                <div class="d-flex align-items-center">
-                                    <img class="img-fluid rounded meal-img" style="width: 80px;" src="{{meal.image.url}}">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span><a href="{% url 'foody:meal_detail' meal.slug %}">{{meal.name}}</a></span>
-                                                <span class="text-h">€ {{meal.price}}</span>
-                                        </h5>
-                                        <small class="fst-italic">{{meal.description}}</small>
-                                    </div>
+                        {% if meal.category == category %}
+
+                        <div>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid rounded meal-img" style="width: 80px;" src="{{meal.image.url}}">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span><a href="{% url 'foody:meal_detail' meal.slug %}">{{meal.name}}</a></span>
+                                        <span class="text-h">€ {{meal.price}}</span>
+                                    </h5>
+                                    <small class="fst-italic">{{meal.description}}</small>
                                 </div>
                             </div>
+                        </div>
 
-                            {% endif %}
+                        {% endif %}
 
                         {% endfor %}
 

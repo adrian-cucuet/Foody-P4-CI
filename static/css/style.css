@@ -261,6 +261,17 @@ body {
     border-bottom: 2px solid var(--primary);
 }
 
+.meal-detail-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.meal-img {
+    width: 500px;
+}
+
 /*** Reservation ***/
 .img-reservation {
     position: relative;
@@ -272,12 +283,35 @@ body {
     background-size: cover;
 }
 
+.form-label {
+    color: var(--light);
+}
+
 .text-reservation {
     z-index: 3;
     position: absolute;
     z-index: 3;
     top: 50%;
     left: 50%;
+}
+
+.times-text {
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: right;
+}
+
+@media (max-width: 991.98px) {
+
+    .times-text {
+        font-size: 5rem;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .times-text-secondary {
+        text-align: center;
+    }
 }
 
 /*** Team ***/
@@ -411,38 +445,4 @@ body {
 .social-icons {
     display: flex !important;
     justify-content: flex-end;
-}
-
-.meal-detail-col {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.meal-img {
-    width: 500px;
-}
-
-.form-label {
-    color: var(--light);
-}
-
-.times-text {
-    font-size: 5rem;
-    font-weight: 800;
-    text-align: right;
-}
-
-@media (max-width: 991.98px) {
-
-    .times-text {
-        font-size: 5rem;
-        font-weight: 800;
-        text-align: center;
-    }
-
-    .times-text-secondary {
-        text-align: center;
-    }
 }
