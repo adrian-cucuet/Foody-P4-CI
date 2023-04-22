@@ -7,12 +7,12 @@
     <div class="container my-5 py-5">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 text-center text-lg-start">
-                <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Food</h1>
-                <p class="text-white animated slideInLeft mb-4 pb-2">We pride ourself with the best food and drinks. Don't just believe us, come try our menu!</p>
-                <a href="{% url 'foody:reserve_table' %}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                <h1 class="display-3 text-white animated slideInLeft">{{hero.title|safe}}</h1>
+                <p class="text-white animated slideInLeft mb-4 pb-2">{{hero.content|safe}}</p>
+                <a href="{% url 'foody:reserve_table' %}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{hero.cta_text}}</a>
             </div>
             <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                <img class="img-fluid" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552765/hero_nbqjl7.png" alt="">
+                <img class="img-fluid" src="{{hero.image.url}}" alt="">
             </div>
         </div>
     </div>
@@ -23,42 +23,21 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-4">
+
+            {% for card in cards %}
+
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
-                        <i class="fa fa-3x fa-utensils text-h mb-4"></i>
-                        <h5>Quality Cuisine</h5>
-                        <p>We work with premium suppliers to make sure we cook with the best products on the market.</p>
+                        <span class="fa fa-3x text-h mb-4">{{card.icon|safe}}</span>
+                        <h5>{{card.title}}</h5>
+                        <p>{{card.content|safe}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-carrot text-h mb-4"></i>
-                        <h5>Fresh Food</h5>
-                        <p>Because our suppliers are hand picked, we can guarantee our products are always fresh.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-user-friends text-h mb-4"></i>
-                        <h5>Friendly Staff</h5>
-                        <p>We have the MOST amazing staff! They all have an extensive experience in hospitality.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item rounded pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-book text-h mb-4"></i>
-                        <h5>Easy Reservation</h5>
-                        <p>Reserving a table with us is as easy as completing a form on our reservation page.</p>
-                    </div>
-                </div>
-            </div>
+            
+            {% endfor %}
+
         </div>
     </div>
 </div>
@@ -72,41 +51,40 @@
             <div class="col-lg-6">
                 <div class="row g-3">
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552765/about-1_j456re.jpg">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="{{about.image_left_up.url}}">
                     </div>
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552764/about-2_vijr78.jpg"
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="{{about.image_right_up.url}}"
                             style="margin-top: 25%;">
                     </div>
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552765/about-3_atasoa.jpg">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="{{about.image_left_down.url}}">
                     </div>
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552765/about-4_htcdvh.jpg">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{{about.image_right_down.url}}">
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <h5 class="section-title ff-secondary text-start text-h fw-normal">About Us</h5>
-                <h1 class="mb-4">Welcome to <i class="fa fa-hamburger text-h me-2"></i>Foody</h1>
-                <p class="mb-4">We offer seasonally inspired menus featuring the highest quality seafood and meats available from the local Gulf coast and beyond. Our full raw bar features several different varieties of oysters and rare delicacies such as and O-toro fatty tuna, Uni, Imperial Golden Ossetra caviar, soft shell crab, and local stone crab claws when available.</p>
-                <p class="mb-4">There is something for every diner — from a traditional dining experience with simply prepared fish to a multi-course experience of shareable small plates. One of the best Happy Hour destinations in town; Tuesday -Friday from 4:00p.m to 6:00p.m. and Bivalves & Bubbles from 4:00p.m-5:00p.m. on Saturday’s</p>
+                <h5 class="section-title ff-secondary text-start text-h fw-normal">{{about.section_title}}</h5>
+                <h1 class="mb-4">{{about.title}}</h1>
+                <p class="mb-4">{{about.content | safe}}</p>
                 <div class="row g-4 mb-4">
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">7</h1>
+                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">{{about.number_a}}</h1>
                             <div class="ps-4">
-                                <p class="mb-0">Years of</p>
-                                <h6 class="text-uppercase mb-0">Experience</h6>
+                                <p class="mb-0">{{about.title_a_small}}</p>
+                                <h6 class="text-uppercase mb-0">{{about.title_a_big}}</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">5</h1>
+                            <h1 class="flex-shrink-0 display-5 text-h mb-0" data-toggle="counter-up">{{about.number_b}}</h1>
                             <div class="ps-4">
-                                <p class="mb-0">Years in a row</p>
-                                <h6 class="text-uppercase mb-0">Best Resturant</h6>
+                                <p class="mb-0">{{about.title_b_small}}</p>
+                                <h6 class="text-uppercase mb-0">{{about.title_b_big}}</h6>
                             </div>
                         </div>
                     </div>
@@ -117,76 +95,6 @@
 </div>
 <!-- About End -->
 
-<!-- Team Start -->
-<div class="container-xxl pt-5 pb-3">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 class="section-title ff-secondary text-center text-h fw-normal">Team Members</h5>
-            <h1 class="mb-5">Our Master Chefs</h1>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/team-1_zfkdjo.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">Mark Twain</h5>
-                    <small>Sous Chef</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/team-2_esgxnk.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">James Smith</h5>
-                    <small>Sous Chef</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/team-3_hdxhhh.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">Tim Jamy</h5>
-                    <small>Pastry Chef</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                        <img class="img-fluid" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/team-4_zsqxzo.jpg" alt="">
-                    </div>
-                    <h5 class="mb-0">Gordon James</h5>
-                    <small>Head Chef</small>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End -->
-
-
 <!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
@@ -195,50 +103,24 @@
             <h1 class="mb-5">Our Clients Say!!!</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">
+
+        {% for testimonial in testimonials %}
+
             <div class="testimonial-item bg-transparent border rounded p-4">
                 <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>The food was amazing, the staff were so polite and helpful. The guests raved about the food & we couldn't have been any happier</p>
+                <p>{{testimonial.content}}</p>
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-1_abhyls.jpg"
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="{{testimonial.image.url}}"
                         style="width: 50px; height: 50px;">
                     <div class="ps-3">
-                        <h5 class="mb-1">Maria</h5>
+                        <h5 class="mb-1">{{testimonial.name}}</h5>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>The restaurant is always well kept and very clean. The staff is friendly and the bartender knows how to make drinks, good drinks.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-2_ygbbxl.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Alessio</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>Everything about this place is perfect. The food is great. The service is great. The drinks are great. The establishment is tidy and welcoming. </p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-3_ge7cdf.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Adrian</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-h mb-3"></i>
-                <p>Fantastic prawns! Everything on the menu is very good. Terrific waitresses - very friendly and efficient. Our group has tried everything on the menu and we love this place!</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="https://res.cloudinary.com/dpt3cjrax/image/upload/v1681552766/testimonial-4_f7eau4.jpg"
-                        style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Michele</h5>
-                    </div>
-                </div>
-            </div>
+
+        {% endfor %}
+
+        </div>
         </div>
     </div>
 </div>

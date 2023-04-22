@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Meals, Category, Reservation, AboutUs, TeamMembers
+from .models import ServiceCards, HeroContainer, Testimonials
 from .forms import ReserveTableForm
 
 # Menu List
@@ -30,15 +31,26 @@ def meal_detail(request, slug):
 
 
 def home(request):
+    about = AboutUs.objects.last()
+    cards = ServiceCards.objects.all()
+    hero = HeroContainer.objects.last()
+    testimonials = Testimonials.objects.all()
 
-    return render(request, 'home.html')
+    context = {
+        'about': about,
+        'cards': cards,
+        'hero': hero,
+        'testimonials': testimonials,
+    }
+
+    return render(request, 'home.html', context)
 
 # About Page
 
 
 def about_us(request):
     about = AboutUs.objects.last()
-    team = TeamMembers.objects.last()
+    team = TeamMembers.objects.all()
 
     context = {
         'about': about,
@@ -58,7 +70,7 @@ def reserve_table(request):
 
         if reserve_form.is_valid():
             reserve_form.save()
-    
+
     context = {'form': reserve_form}
 
     return render(request, 'reservation.html', context)

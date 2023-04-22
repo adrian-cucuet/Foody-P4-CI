@@ -93,7 +93,7 @@ class AboutUs(models.Model):
     title_b_small = models.CharField(max_length=30)
     title_b_big = models.CharField(max_length=30)
     image_left_up = models.ImageField(upload_to='img/aboutus/')
-    image_Left_down = models.ImageField(upload_to='img/aboutus/')
+    image_left_down = models.ImageField(upload_to='img/aboutus/')
     image_right_up = models.ImageField(upload_to='img/aboutus/')
     image_right_down = models.ImageField(upload_to='img/aboutus/')
 
@@ -116,6 +116,56 @@ class TeamMembers(models.Model):
     class Meta:
         verbose_name = 'Team Members'
         verbose_name_plural = 'Team Members'
+
+    def __str__(self):
+        return self.name
+
+
+# Service Cards
+
+
+class ServiceCards(models.Model):
+    title = models.CharField(max_length=50)
+    icon = models.TextField()
+    content = models.TextField()
+
+    class Meta:
+        verbose_name = 'Service Cards'
+        verbose_name_plural = 'Service Cards'
+
+    def __str__(self):
+        return self.title
+
+
+# Hero
+
+
+class HeroContainer(models.Model):
+    name = models.CharField(max_length=200, null=True)
+    title = models.TextField()
+    content = models.TextField()
+    image = models.ImageField(upload_to='img/hero/')
+    cta_text = models.TextField()
+
+    class Meta:
+        verbose_name = 'Hero Container'
+        verbose_name_plural = 'Hero Container'
+
+    def __str__(self):
+        return self.name
+
+
+# Testimonials
+
+
+class Testimonials(models.Model):
+    name = models.CharField(max_length=30)
+    content = models.TextField()
+    image = models.ImageField(upload_to='img/testimonials/')
+
+    class Meta:
+        verbose_name = 'Testimonials'
+        verbose_name_plural = 'Testimonials'
 
     def __str__(self):
         return self.name
