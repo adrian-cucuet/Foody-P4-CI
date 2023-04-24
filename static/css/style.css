@@ -261,11 +261,27 @@ body {
     border-bottom: 2px solid var(--primary);
 }
 
+/* Detail Menu Page */
+
 .meal-detail-col {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.details-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.rounded-img-detail {
+    border-radius: 10px;
+}
+
+.icon-detail {
+    color: var(--primary);
 }
 
 .meal-img {

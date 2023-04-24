@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="py-5 bg-custom hero-header mb-5">
-    <div class="container text-center my-5 pt-5 pb-4">
+    <div class="container text-center my-5 pt-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown">{{meal_detail.name}}</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center text-uppercase">
@@ -13,15 +13,15 @@
 </div>
 <div class="container">
     <div class="py-5 meal-detail-col">
-        <img class="img-fluid rounded meal-img" src="{{meal_detail.image.url}}" alt="">
-        <div>
-            <h4>{{meal_detail.description}}</h4>
+        <img class="img-fluid rounded-img-detail meal-img" src="{{meal_detail.image.url}}" alt="">
+        <div class="details-right">
+            <h5><i class="fas fa-shopping-basket icon-detail"></i> Ingredients: {{meal_detail.description}}</h5>
             <br>
-            <h4>Good for: {{meal_detail.people}} people</h4>
+            <h5><i class="fas fa-utensils icon-detail"></i> Serves: {{meal_detail.people}}</h5>
             <br>
-            <h4>Preparation time: {{meal_detail.preparation_time}} minutes</h4>
+            <h5><i class="fas fa-clock icon-detail"></i> Preparation time: {{meal_detail.preparation_time}} minutes</h5>
             <br>
-            <h4>Price: {{meal_detail.price}}€</h4>
+            <h5><i class="fas fa-coins icon-detail"></i> Price: {{meal_detail.price}}€</h5>
         </div>
     </div>
 </div>

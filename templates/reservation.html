@@ -5,7 +5,7 @@
 
 <!-- Reservation Start -->
 <div class="py-5 bg-custom hero-header mb-5">
-    <div class="container text-center my-5 pt-5 pb-4">
+    <div class="container text-center my-5 pt-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown">Reserve a Table</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb justify-content-center text-uppercase">
@@ -16,13 +16,6 @@
     </div>
 </div>
 <br>
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
 <!-- Times Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -60,10 +53,10 @@
                 </span>
             </div>
         </div>
-        <div class="col-md-6 bg-custom d-flex align-items-center">
+        <div class="col-md-6 bg-custom align-items-center">
             <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                 <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
-                <h1 class="text-white mb-4">Book A Table Online</h1>
+                <h2 class="text-white mb-4">Book A Table</h2>
                 <form action="" method="POST" class="form">
                     {% csrf_token %}
 
