@@ -189,7 +189,7 @@ body {
 }
 
 .hero-header img {
-    animation: imgRotate 50s linear infinite;
+    animation: imgRotate 120s linear infinite;
 }
 
 @keyframes imgRotate {
@@ -315,6 +315,8 @@ body {
     font-size: 5rem;
     font-weight: 800;
     text-align: right;
+    color: var(--dark);
+    text-shadow: 3px 4px 3px rgb(0 0 0 / 40%);
 }
 
 @media (max-width: 991.98px) {
