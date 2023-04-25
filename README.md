@@ -164,7 +164,7 @@ Wireframes for this project can be located [here](wireframes.md)
 * Manual testing has been performed for every page on the website as well as navigation.
 
 * [CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffoody-p4.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors) passed. The only error is from 3rd party libraries.
-* [HTML validator](https://fonts.google.com/) passed. Only errors from Summernote html tags.
+* [HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoody-p4.herokuapp.com%2F) passed. Only errors from Summernote html tags and for the img alt (as I am working with images from coudinary and for loops).
 * All code was written following PEP8 Style Guide. Checks have been done using [ExtendClass](https://extendsclass.com/python-tester.html) for all python files
 
 ## Creating the Django app
