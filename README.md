@@ -13,14 +13,12 @@ README Table Content
     - [The Scope](#the-scope)
   - [Design](#design)
     - [Wireframes](#wireframes)
-  - [Database Diagram](#database-diagram)
   - [Features](#features)
     - [Home Page](#home-page)
     - [About Page](#about-page)
     - [Menu Page](#menu-page)
     - [Navbar](#navbar)
     - [Footer](#footer)
-  - [Admin Panel/Superuser](#admin-panelsuperuser)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
       - [Django Packages](#django-packages)
@@ -186,31 +184,29 @@ Wireframes for this project can be located [here](wireframes.md)
 
 * This site was deployed by completing the following steps:
 
-1. Log in to [Heroku](https://id.heroku.com) or create an account
-2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New
-App
-3. You must enter a unique app name
-4. Next select your region
-5. Click on the Create App button
-6. Click in resources and select Heroku Postgres database
+1. Log in to [Heroku](https://id.heroku.com) or create an account.
+2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App.
+3. You must enter a unique app name.
+4. Next select your region.
+5. Click on the Create App button.
+6. Click in resources and select Heroku Postgres database.
 7. Click Reveal Config Vars and add a new record with SECRET_KEY
 8. Click Reveal Config Vars and add a new record with the `CLOUDINARY_URL`
 9. Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1`
-10. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
-11. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
-12. Scroll to the top of the page and choose the Deploy tab
-13. Select Github as the deployment method
-14. Confirm you want to connect to GitHub
-15. Search for the repository name and click the connect button
-16. Scroll to the bottom of the deploy page and select the preferred deployment type
-17. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+10. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars.
+11. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes.
+12. Scroll to the top of the page and choose the Deploy tab.
+13. Select Github as the deployment method.
+14. Confirm you want to connect to GitHub.
+15. Search for the repository name and click the connect button.
+16. Scroll to the bottom of the deploy page and select the preferred deployment type.
+17. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
 
 ## Final Deployment 
 
 1. Create a Procfile `web: gunicorn your_project_name.wsgi`
 2. When development is complete change the debug setting to: `DEBUG = False` in settings.py
-3. In this project the summernote editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = SAMEORIGIN `to
-   settings.py.
+3. In this project the summernote editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = SAMEORIGIN `to settings.py.
 4. In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
 
 ## Forking This Project
@@ -218,21 +214,20 @@ App
 * Fork this project by following the steps:
 
 1. Open [GitHub](https://github.com/adrian-cucuet/Foody-P4-CI/)
-2. Find the 'Fork' button at the top right of the page
-3. Once you click the button the fork will be in your repository
+2. Find the 'Fork' button at the top right of the page.
+3. Once you click the button the fork will be in your repository.
 
 ## Cloning This Project
 
 * Clone this project by following the steps:
 
-1. Open GitHub
-2. You will be provided with three options to choose from, HTTPS, SSH or GitHub CLI, click the clipboard icon in order
-to copy the URL
-3. Once you click the button the fork will be in your repository
-4. Open a new terminal
-5. Change the current working directory to the location that you want the cloned directory
-6. Type 'git clone' and paste the URL copied in step 3
-7. Press 'Enter' and the project is cloned
+1. Open GitHub.
+2. You will be provided with three options to choose from, HTTPS, SSH or GitHub CLI, click the clipboard icon in order to copy the URL.
+3. Once you click the button the fork will be in your repository.
+4. Open a new terminal.
+5. Change the current working directory to the location that you want the cloned directory.
+6. Type 'git clone' and paste the URL copied in step 3.
+7. Press 'Enter' and the project is cloned.
 
 ### Content
 
