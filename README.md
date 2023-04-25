@@ -1,9 +1,11 @@
 # Foody - Introduction
 
+![Mockup Device](static/img/3-devices-black.png)
+
 Project milestone 4 for Code Institute Full-stack development program.
 Foody is a website for a restaurant where user can check the menu and make reservations, while the owner can check the reservation and update the menu according to the kitchen.
 
-[Live Project Here]()
+[Live Project Here](https://foody-p4.herokuapp.com/)
 
 README Table Content
 
@@ -32,7 +34,6 @@ README Table Content
   - [Credits](#credits)
     - [Content](#content)
     - [Information Sources / Resources](#information-sources--resources)
-  - [Special Thanks](#special-thanks)
 
 ## User Experience - UX
 
@@ -77,8 +78,6 @@ All functionality and development of this project were managed using GitHub whic
 
 #### Imagery
 
-* All the imagery is related to the recipes and website design.
-The remaining imagery will be uploaded by the author to the database.
 * For the purpose of the project all the images used are from template provided by [ThemeWagon](https://themewagon.com/)
 
 ### Wireframes
@@ -164,6 +163,10 @@ Wireframes for this project can be located [here](wireframes.md)
 * Manual testing has been performed for the Reservation form.
 * Manual testing has been performed for every page on the website as well as navigation.
 
+* [CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffoody-p4.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors) passed. The only error is from 3rd party libraries.
+* [HTML validator](https://fonts.google.com/) passed. Only errors from Summernote html tags.
+* All code was written following PEP8 Style Guide. Checks have been done using [ExtendClass](https://extendsclass.com/python-tester.html) for all python files
+
 ## Creating the Django app
 
 1. Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template)
@@ -238,7 +241,6 @@ Wireframes for this project can be located [here](wireframes.md)
 * Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 * [W3Schools - Python](https://www.w3schools.com/python/)
 * [Stack Overflow](https://stackoverflow.com/)
-* [Django](https://docs.djangoproject.com/en/4.2/)
-   Used when I had issues that needed to be fixed.
-* [Udemy](https://www.udemy.com/course/build-a-restuarnt-site-with-python-and-django/)
-   Used the tutorial for models and views.
+* [Django](https://docs.djangoproject.com/en/4.2/) Used when I had issues that needed to be fixed.
+* Menu images downaloaded from [Unsplash](https://unsplash.com/)
+* [Udemy](https://www.udemy.com/course/build-a-restuarnt-site-with-python-and-django/) Used the tutorial for models and views.
