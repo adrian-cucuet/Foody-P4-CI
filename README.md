@@ -167,6 +167,11 @@ Wireframes for this project can be located [here](wireframes.md)
 * [HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoody-p4.herokuapp.com%2F) passed. Only errors from Summernote html tags and for the img alt (as I am working with images from coudinary and for loops).
 * All code was written following PEP8 Style Guide. Checks have been done using [ExtendClass](https://extendsclass.com/python-tester.html) for all python files
 
+### Bugs to be fixed
+
+* Finding a solution for image alt attribute for images that are stored in Cloudinary and are uploaded by the business owner.
+* The menu tabs to display only the meals that are included in the active category and have one category as default active.
+
 ## Creating the Django app
 
 1. Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template)
